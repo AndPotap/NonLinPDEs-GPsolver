@@ -1,20 +1,13 @@
-# %%
-# argparse for command lines
 import argparse
 
 import jax
-
-# jax
 import jax.numpy as jnp
+import numpy as onp
 from jax import grad, jit, vmap
 
-jax.config.update("jax_enable_x64", True)
-
-# numpy
-import numpy as onp
-
-# solver
 from src.solver import solver_GP
+
+jax.config.update("jax_enable_x64", True)
 
 
 # solving nonlinear elliptic: -Delta u + alpha*u^m = f in [0,1]^2

@@ -1,20 +1,16 @@
-# JAX
+import sys
 from functools import partial
 
 import jax
 import jax.numpy as jnp
-from jax import grad, hessian, jit, vmap
-
-jax.config.update("jax_enable_x64", True)
-
-# numpy
-import sys
-
 import numpy as onp
+from jax import grad, hessian, jit, vmap
 from numpy import random
 
 from .Gram_matrice import Gram_matrix_assembly, construct_Theta_test
 from .sample_points import sampled_pts_grid, sampled_pts_rdm
+
+jax.config.update("jax_enable_x64", True)
 
 
 class Nonlinear_elliptic2d(object):
